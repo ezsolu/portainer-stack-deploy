@@ -257,7 +257,7 @@ async fn main() -> Result<(), reqwest::Error> {
         "" => {
             let create_response = client
                 .post(format!(
-                    "{}/api/stacks?endpointId={}&method=repository&type=2",
+                    "{}/api/stacks?endpointId={}&method=repository&type=1",
                     &server, endpoint
                 ))
                 .header(auth_name, auth_value)
@@ -271,7 +271,7 @@ async fn main() -> Result<(), reqwest::Error> {
         c => {
             client
                 .post(format!(
-                    "{}/api/stacks?endpointId={}&method=string&type=2",
+                    "{}/api/stacks?endpointId={}&method=string&type=1",
                     &server, endpoint
                 ))
                 .header(auth_name, auth_value)
